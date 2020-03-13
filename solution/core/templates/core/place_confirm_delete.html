@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% block content %}
+
+
+{% if object %}
+<a href="{% url 'core:place-detail' object.id %}"> back</a>
+{% else %}
+<a href="{% url 'core:place-list' %}"> back</a>
+{% endif %}
+
+<form action="" method="post">
+    {% csrf_token %}
+        Delete This?
+    <button type="submit"> Yeeeh!</button>
+</form>
+
+{% endblock content %}

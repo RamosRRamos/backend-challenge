@@ -1,0 +1,7 @@
+{% extends 'base.html' %}
+{% block content %}
+
+{% for place in object_list %}
+ <a href="{% url 'core:place-detail' place.id %}">{{ place }}</a>
+{% endfor %}
+{% endblock content %}

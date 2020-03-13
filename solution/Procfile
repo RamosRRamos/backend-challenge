@@ -1,0 +1,1 @@
+web: gunicorn pland.wsgi --log-file -

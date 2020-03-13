@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<a href="{% url 'core:place-list' %}"> back</a>
+<a href="{% url 'core:place-update' object.id %}"> update</a>
+<a href="{% url 'core:place-delete' object.id %}"> delete</a>
+
+Name: {{object.name}} <br>
+Slug: {{object.slug}} <br>
+City: {{object.city}} <br>
+State: {{object.state}} <br>
+Created_at: {{object.created_at}} <br>
+Update_at: {{object.update_at}} <br>
+
+
+
+{% endblock content %}
